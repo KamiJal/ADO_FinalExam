@@ -1,0 +1,133 @@
+﻿<Page x:Class="ADO_Exam.PAGES.OPTIONS"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ADO_Exam.PAGES"
+      mc:Ignorable="d" 
+      d:DesignHeight="476" d:DesignWidth="754"
+      Title="OPTIONS">
+
+    <Page.Resources>
+        <ResourceDictionary Source="/STYLE/OPTIONS_STYLE.xaml"/>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <TabControl>
+                <TabItem Style="{StaticResource TabItemStat}">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <StackPanel Orientation="Vertical">
+                                <Label Style="{StaticResource HeaderLabel}" 
+                                       Content="Таблица Vacancies"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Количество записей:"/>
+                                    <Label x:Name="VacanciesCount"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <StackPanel Orientation="Vertical">
+                                <Label Style="{StaticResource HeaderLabel}"
+                                       Content="Таблица Categories"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Количество записей:"/>
+                                    <Label x:Name="CategoriesCount"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <StackPanel Orientation="Vertical">
+                                <Label Style="{StaticResource HeaderLabel}"
+                                       Content="Очистка базы данных"/>
+                                <Button Style="{StaticResource CleanDBBTNStyle}"
+                                        x:Name="CleanDBBTN"
+                                        Click="CleanDBBTN_Click"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
+
+                <TabItem Style="{StaticResource TabItemOpt}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="1">
+                            <StackPanel Style="{StaticResource OptionWrapper}">
+                                <Label Style="{StaticResource OptionLabel}"
+                                       Content="Сервер базы данных"/>
+                                <TextBox Style="{StaticResource OptionTextBox}"
+                                         x:Name="DataSource"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <StackPanel Style="{StaticResource OptionWrapper}">
+                                <Label Style="{StaticResource OptionLabel}"
+                                       Content="Название базы данных"/>
+                                <TextBox Style="{StaticResource OptionTextBox}"
+                                         x:Name="InitialCatalog"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+                            <StackPanel Style="{StaticResource OptionWrapper}">
+                                <Label Style="{StaticResource OptionLabel}"
+                                       Content="Имя пользователя"/>
+                                <TextBox Style="{StaticResource OptionTextBox}"
+                                         x:Name="UserID"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+                            <StackPanel Style="{StaticResource OptionWrapper}">
+                                <Label Style="{StaticResource OptionLabel}"
+                                       Content="Пароль пользователя"/>
+                                <TextBox Style="{StaticResource OptionTextBox}"
+                                         x:Name="Password"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="5">
+                            <Button Style="{StaticResource ChangeConfigBTNStyle}"
+                                    x:Name="ChangeConfigBTN"
+                                    Click="ChangeConfigBTN_Click"/>
+                        </Grid>
+
+                        <Grid Grid.Row="6">
+                            <TextBlock Style="{StaticResource CurrentOptionsTextblock}"
+                                       x:Name="CurrentOptions"/>
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+        </Grid>
+
+    </Grid>
+</Page>

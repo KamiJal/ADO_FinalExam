@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ADO_Exam.STYLE">
+
+    <Style x:Key="HeaderLabel" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="CleanDBBTNStyle" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Content" Value="ОЧИСТИТЬ"/>
+        <Setter Property="Margin" Value="5 10 0 0"/>
+    </Style>
+
+    <Style x:Key="TabItemDefault" TargetType="{x:Type TabItem}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="35"/>
+    </Style>
+
+    <Style x:Key="TabItemStat" TargetType="{x:Type TabItem}"
+               BasedOn="{StaticResource TabItemDefault}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Header" Value="Статистическая информация"/>
+    </Style>
+
+    <Style x:Key="TabItemOpt" TargetType="{x:Type TabItem}"
+               BasedOn="{StaticResource TabItemDefault}">
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Header" Value="Настройка базы данных"/>
+    </Style>
+
+    <Style x:Key="OptionWrapper" TargetType="{x:Type StackPanel}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0 0 40 0"/>
+    </Style>
+
+    <Style x:Key="OptionTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10 0 0 0"/>
+    </Style>
+
+    <Style x:Key="OptionLabel" TargetType="{x:Type Label}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ChangeConfigBTNStyle" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Content" Value="ИЗМЕНИТЬ НАСТРОЙКИ"/>
+        <Setter Property="Margin" Value="0 10 40 0"/>
+    </Style>
+
+    <Style x:Key="CurrentOptionsTextblock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="Padding" Value="15"/>
+    </Style>
+
+</ResourceDictionary>
